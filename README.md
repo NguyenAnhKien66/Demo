@@ -31,10 +31,26 @@ class SinhvienCNTT(mssv:String): sinhvien1(mssv)
         super.hienthii()
     }
 }
-
-
-
-
+class SinhvienKeToan(mssv:String): sinhvien1(mssv)
+{
+    override var hoTen: String=" "
+    override var namSinh: Int=2004
+    override  fun SonamHoc(hocky: Int)
+    {
+        if(hocky<=5)
+        {
+            var nam=(hocky-1)/2+1
+            println("ban dang la sinh vien nam thu $nam")
+        }
+        else{
+            println("Ban da tot nghiep")
+        }
+    }
+    override fun hienthii() {
+        println("nganh ke toan, ")
+        super.hienthii()
+    }
+}
 fun main()
 {
     val s1=SinhvienCNTT("030652133");
