@@ -6,11 +6,36 @@ abstract class sinhvien1(mssv:String)
     init {
         this.mssv=mssv
     }
+    abstract fun SonamHoc(hocky:Int)
+    open fun hienthii()
+    {
+        var mess="Sinh vien $hoTen co MSSV: $mssv sinh nam $namSinh "
+        println(mess);
+    }
+
+}
+class SinhvienCNTT(mssv:String): sinhvien1(mssv)
+{
+    override var hoTen: String=" "
+    override var namSinh: Int=2003
+    override  fun SonamHoc(hocky: Int)
+    {
+        if(hocky<=6)
+        {
+            var nam=(hocky-1)/2+1
+            println("ban dang la sinh vien nam thu $nam")
+        }
+    }
+    override fun hienthii() {
+        println("nganh CNTT, ")
+        super.hienthii()
+    }
+}
 
 
 
 
-    fun main()
+fun main()
 {
     val s1=SinhvienCNTT("030652133");
     s1.hoTen="Nguyen Van Minh"
